@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <title>CALCULATOR</title>
+    <style>
+        body{
+            margin-left: 35rem;
+            margin-top: 14rem;
+            background-image: url("hp.jpg");
+            background-repeat: no-repeat;
+          
+            
+        }
+        button:focus{
+            color:antiquewhite;
+            background-color:black;
+        }
+        button:active{
+            color:antiquewhite;
+            background-color:black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div ng-app="">
+        <h1>&nbsp; &nbsp; &nbsp; &nbsp; Calculator</h1>
+        <p>NUMBER 1: <input type="number" ng-model="m1"></p>
+        <p>NUMBER 2: <input type="number" ng-model="m2"></p>
+    
+        <button ng-click="add = m1+m2"> ADDITION</button>
+        <button ng-click="sub= m1-m2"> SUBTRACTION</button>
+        <button ng-click="mul = m1*m2"> MULTIPLICATION</button><br><br>
+        <button ng-click="div= m1/m2"> DIVISION</button>
+        <button ng-click="tri = 0.5*m1*m2">AREA(TRIANGLE)</button>
+        <button ng-click="rec= m1*m2">AREA(RECTANGLE)</button><br><br>
+        
+        RESULT: <span>{{add}}<span>
+        <span>{{sub}}</span>
+        <span>{{mul}}</span>
+        <span>{{div}}</span>
+        <span>{{tri}}</span>
+        <span>{{rec}}</span>
+       
+    </div>
+</body>
+</html>
